@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-ng-video-player',
+  // tslint:disable-next-line:component-selector
+  selector: 'ng-video-player',
   template: `
     <p>
-      ng-video-player works!
+      video-player works!
     </p>
   `,
   styles: []
