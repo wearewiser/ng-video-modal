@@ -1,0 +1,8 @@
+<div class="overlay" [ngClass]="show?'show':'hide'" (click)="hide=true">
+    <div class="modal" (click)="stopPropagation($event)">
+        <div class="video-wrapper" *ngIf="src">
+            <div class="close" (click)="hide=true">X</div>
+            <video id="video-target" [src]="src" autoplay controls playsinline webkit-playsinline></video>
+        </div>
+    </div>
+</div>

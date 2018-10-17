@@ -1,0 +1,83 @@
+:host {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    pointer-events: none;
+    background-color: rgba(0,0,0,0);
+}
+.overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.8);
+    transition: 1s ease opacity;
+}
+.overlay.show {
+    pointer-events: all;
+    opacity: 1;
+}
+.overlay.hide {
+    pointer-events: none;
+    opacity: 0;
+}
+.modal {
+    display: block;
+    width: 80%;
+    height: 80%;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background: black;
+    max-height: 80vw;
+}
+.video-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.video-wrapper.close {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: 0.666;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    z-index: 300;
+}
+.video-wrapper.close:hover {
+    opacity: 1;
+}
+.video-wrapper.active:hover {
+    color:red;
+    background-color: white;
+    opacity: 0.9;
+}
+video {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    max-height: 80vh;
+}
